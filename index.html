@@ -5,87 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charlie - Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Helvetica+Neue:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Charlie</h1>
-        <p>Software Engineering Student</p>
-    </header>
+    <div class="container">
+        <header class="masthead">
+            <div class="header-line"></div>
+            <h1 class="site-title">Charlie</h1>
+            <p class="tagline">Software Engineering Student</p>
+            <div class="header-line"></div>
+        </header>
 
-    <main>
-        <section class="intro">
-            <p>I'm a Systems and Computer Engineering student with experience in web development and DevOps. I enjoy creating accessible, functional, and well-designed websites while continuously learning and adapting to new challenges.</p>
-        </section>
+        <main class="main-content">
+            <article class="lead-story">
+                <p class="lead-paragraph">Hey! I’m Carlos Galvis. I’m an engineering student who’s really into tech, design, and building crazy things. :)</p>
+            </article>
 
-        <section class="about">
-            <h2>About Me</h2>
-            <p>I'm passionate about technology, problem-solving, and teamwork. Through my experience in web development and AI training, I have worked on projects that combine programming, content creation, and optimization of AI models. My strengths are adaptability, creativity, and a strong focus on delivering quality results.</p>
-        </section>
+            <section class="section">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+                <p>I love working on projects that are both functional and visually interesting—anything from interactive simulators to sleek web interfaces or automation tools.</p>
+                <p>What excites me most is mixing creativity with technical know-how. I’m not just about solving problems; I want to create stuff that people connect with. Lately, I’ve been diving into web engineering, visual programming, UX, and applied AI—always curious, always building, and always trying to bring value through technology.</p>
+            </section>
 
-        <section class="projects">
-            <h2>Projects</h2>
+            <section class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-line"></div>
+                
+                <h3 class="subsection-title">Professional Projects</h3>
+                
+                <article class="project-article">
+                    <h4 class="project-headline">HRG Soluciones S.A.S Website</h4>
+                    <p class="project-summary">Corporate website featuring electrical, construction, and maintenance services.</p>
+                    <div class="project-details">
+                        <span class="detail-item"><strong>Focus:</strong> Corporate Website, Professional Services</span>
+                        <span class="detail-item"><strong>Stack:</strong> HTML, CSS, JavaScript, Database Integration</span>
+                    </div>
+                </article>
+
+                <article class="project-article">
+                    <h4 class="project-headline">Tera Studios Website</h4>
+                    <p class="project-summary">Modern company website with a clean design and professional presentation.</p>
+                    <div class="project-details">
+                        <span class="detail-item"><strong>Focus:</strong> Web Development, Company Website</span>
+                        <span class="detail-item"><strong>Stack:</strong> HTML, CSS, JavaScript</span>
+                    </div>
+                </article>
+
+                <h3 class="subsection-title">Personal & Experimental Projects</h3>
+                
+                <article class="project-article">
+                    <h4 class="project-headline">SVG Half-tone Filter</h4>
+                    <p class="project-summary">Interactive application that applies half-tone effects to images using advanced SVG filters and JavaScript.</p>
+                    <div class="project-details">
+                        <span class="detail-item"><strong>Focus:</strong> SVG Filters, Image Processing</span>
+                        <span class="detail-item"><strong>Stack:</strong> JavaScript, SVG</span>
+                    </div>
+                </article>
+
+                <article class="project-article">
+                    <h4 class="project-headline">World Time Website</h4>
+                    <p class="project-summary">Real-time world clock displaying multiple time zones with city backgrounds and live updates.</p>
+                    <div class="project-details">
+                        <span class="detail-item"><strong>Focus:</strong> Time Zones, Real-time Data</span>
+                        <span class="detail-item"><strong>Stack:</strong> JavaScript, APIs</span>
+                    </div>
+                </article>
+
+                <article class="project-article">
+                    <h4 class="project-headline">Pixel Runner</h4>
+                    <p class="project-summary">Endless runner game with pixel art graphics and smooth gameplay mechanics.</p>
+                    <div class="project-details">
+                        <span class="detail-item"><strong>Focus:</strong> Game Development, Interactive Web App</span>
+                        <span class="detail-item"><strong>Stack:</strong> JavaScript, HTML5 Canvas</span>
+                    </div>
+                </article>
+
+                <article class="project-article">
+                    <h4 class="project-headline">SimpleOS Terminal Simulator</h4>
+                    <p class="project-summary">Web-based terminal simulator supporting basic system commands.</p>
+                    <div class="project-details">
+                        <span class="detail-item"><strong>Focus:</strong> Terminal Simulation, Web App</span>
+                        <span class="detail-item"><strong>Stack:</strong> React, TypeScript</span>
+                    </div>
+                </article>
+
+                <article class="project-article">
+                    <h4 class="project-headline">Climate App</h4>
+                    <p class="project-summary">Web application that estimates temperature anomalies based on CO₂ levels using a machine learning model.</p>
+                    <div class="project-details">
+                        <span class="detail-item"><strong>Focus:</strong> Machine Learning, Climate Analysis, Data Science</span>
+                        <span class="detail-item"><strong>Stack:</strong> Python, JavaScript, ML Model Integration</span>
+                    </div>
+                </article>
+            </section>
             
-            <h3>Professional Projects</h3>
-            <div class="project">
-                <h4>HRG Soluciones S.A.S Website</h4>
-                <p>Corporate website featuring electrical, construction, and maintenance services.</p>
-                <p><strong>Focus:</strong> Corporate Website, Professional Services</p>
-                <p><strong>Stack:</strong> HTML, CSS, JavaScript, Database Integration</p>
-            </div>
-
-            <div class="project">
-                <h4>Tera Studios Website</h4>
-                <p>Modern company website with a clean design and professional presentation.</p>
-                <p><strong>Focus:</strong> Web Development, Company Website</p>
-                <p><strong>Stack:</strong> HTML, CSS, JavaScript</p>
-            </div>
-
-            <h3>Personal & Experimental Projects</h3>
-            <div class="project">
-                <h4>SVG Half-tone Filter</h4>
-                <p>Interactive application that applies half-tone effects to images using advanced SVG filters and JavaScript.</p>
-                <p><strong>Focus:</strong> SVG Filters, Image Processing</p>
-                <p><strong>Stack:</strong> JavaScript, SVG</p>
-            </div>
-
-            <div class="project">
-                <h4>World Time Website</h4>
-                <p>Real-time world clock displaying multiple time zones with city backgrounds and live updates.</p>
-                <p><strong>Focus:</strong> Time Zones, Real-time Data</p>
-                <p><strong>Stack:</strong> JavaScript, APIs</p>
-            </div>
-
-            <div class="project">
-                <h4>Pixel Runner</h4>
-                <p>Endless runner game with pixel art graphics and smooth gameplay mechanics.</p>
-                <p><strong>Focus:</strong> Game Development, Interactive Web App</p>
-                <p><strong>Stack:</strong> JavaScript, HTML5 Canvas</p>
-            </div>
-
-            <div class="project">
-                <h4>SimpleOS Terminal Simulator</h4>
-                <p>Web-based terminal simulator supporting basic system commands.</p>
-                <p><strong>Focus:</strong> Terminal Simulation, Web App</p>
-                <p><strong>Stack:</strong> React, TypeScript</p>
-            </div>
-
-            <div class="project">
-                <h4>Climate App</h4>
-                <p>Web application that estimates temperature anomalies based on CO₂ levels using a machine learning model.</p>
-                <p><strong>Focus:</strong> Machine Learning, Climate Analysis, Data Science</p>
-                <p><strong>Stack:</strong> Python, JavaScript, ML Model Integration</p>
-            </div>
-        </section>
-
-        <section class="contact">
-            <h2>Contact</h2>
-            <ul>
-                <li>Email: <a href="mailto:cgalvis21_@hotmail.com">cgalvis21_@hotmail.com</a></li>
-                <li>LinkedIn: <a href="https://linkedin.com/in/cgalvisp">linkedin.com/in/cgalvisp</a></li>
-                <li>GitHub: <a href="https://github.com/Charlsz">github.com/Charlsz</a></li>
-                <li>Location: Colombia (Available for remote work worldwide)</li>
-            </ul>
-        </section>
-    </main>
+            <section class="section contact-section">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-line"></div>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:cgalvis21_@hotmail.com">cgalvis21_@hotmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/cgalvisp">linkedin.com/in/cgalvisp</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>GitHub:</strong> <a href="https://github.com/Charlsz">github.com/Charlsz</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> Colombia (Available for remote work worldwide)
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
