@@ -50,6 +50,8 @@ body {
     color: #666;
 }
 
+
+
 .main-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -101,10 +103,20 @@ body {
     padding-bottom: 5px;
 }
 
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+
 .project-article {
     margin-bottom: 30px;
     padding: 20px 0;
     border-bottom: 1px solid #f0f0f0;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    align-items: start;
 }
 
 .project-headline {
@@ -183,6 +195,15 @@ a:hover {
     
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .project-article {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-image {
+        order: -1;
     }
 }
 
