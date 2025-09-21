@@ -103,7 +103,7 @@ body {
     padding-bottom: 5px;
 }
 
-.logo {
+.project-images {
   width: 100%;
   height: auto;
 }
@@ -161,7 +161,22 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
+
+.icons {
+    width: 20px;
+    height: 20px;
+
+}
+
+.icons:hover {
+    transform: scale(1.1);
+}
+
+
 
 a {
     color: #326891;
