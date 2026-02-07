@@ -151,19 +151,11 @@ body {
     border-bottom: none;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.contact-item {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+.contact-icons {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
 .icons {
@@ -176,14 +168,12 @@ body {
 }
 
 .icon-link {
-    font-size: 20px;
+    font-size: 24px;
     color: #333;
     transition: color 0.2s ease, transform 0.2s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    flex-shrink: 0;
     border-bottom: none !important;
 }
 
@@ -225,8 +215,8 @@ a:hover {
         font-size: 20px;
     }
     
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .contact-icons {
+        gap: 20px;
     }
     
     .project-article {
