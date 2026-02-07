@@ -169,11 +169,28 @@ body {
 .icons {
     width: 20px;
     height: 20px;
-
 }
 
 .icons:hover {
     transform: scale(1.1);
+}
+
+.icon-link {
+    font-size: 20px;
+    color: #333;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    flex-shrink: 0;
+    border-bottom: none !important;
+}
+
+.icon-link:hover {
+    color: #326891;
+    transform: scale(1.15);
+    border-bottom: none !important;
 }
 
 
