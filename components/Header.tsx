@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { basePath } from "@/next.config";
 
 export default function Header() {
   return (
@@ -7,12 +7,11 @@ export default function Header() {
       <h1 className="site-title">Charlie</h1>
       <p className="tagline">Software Engineering Student</p>
       <div className="header-line" />
-      <Image
-        src="/images/cat-pixel.gif"
+      <img
+        src={`${basePath}/images/cat-pixel.gif`}
         width={50}
         height={50}
         alt="Pixel cat"
-        unoptimized
       />
     </header>
   );
