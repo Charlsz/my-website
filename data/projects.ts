@@ -1,8 +1,8 @@
-import { Project } from "@/types";
+import { Contribution, Project } from "@/types";
 
 export const featuredProjects: Project[] = [
   {
-    title: "NoruSearch - Universal space data browser",
+    title: "NoruSearch - Universal space data browser (+2 Stars on GitHub)",
     summary:
       "Search, explore, and visualize NASA (and many more) datasets from a single interface",
     focus: "NASA Datasets, Space Visualization, Universal Search",
@@ -25,7 +25,7 @@ export const featuredProjects: Project[] = [
     title: "LoLForge - AI-Powered League of Legends Recap",
     summary:
       "Year-end performance analytics platform using AWS Bedrock AI to generate personalized insights for League of Legends players. Built for the Rift Rewind Hackathon 2025.",
-    focus: "AI Insights, Gaming Analytics, Hackathon Project",
+    focus: "AI Insights, Gaming Analytics, Project",
     stack: "Next.js, TypeScript, AWS Bedrock, Riot Games API, AWS Amplify",
     image: "/images/lolforge.png",
     alt: "LoLForge Project",
@@ -80,15 +80,6 @@ export const academicProjects: Project[] = [
     link: "https://github.com/Charlsz/slider_design",
   },
   {
-    title: "ROBLE Microservices Platform - University Project (UNINORTE)",
-    summary:
-      "Microservices platform integrated with Universidad del Norte's ROBLE authentication system. Enables users to create, manage, and test dynamic Docker-based microservices through a visual web dashboard with real-time monitoring, user role control, and built-in testing tools.",
-    focus: "Dynamic Microservices Management, Authentication Integration",
-    stack: "Python, Flask, Docker, HTML, JavaScript",
-    image: "/images/microservices_uninorte.png",
-    link: "https://github.com/Charlsz/microservices_roble",
-  },
-  {
     title: "Host Roble - University Platform Integration",
     summary:
       "Microservices-based authentication system integrating with Universidad del Norte's Roble platform using Docker containers.",
@@ -97,5 +88,37 @@ export const academicProjects: Project[] = [
     image: "/images/host_roble.png",
     alt: "Host Roble Project",
     link: "https://github.com/Charlsz/host_roble",
+  },
+];
+
+export const openSourceContributions: Contribution[] = [
+  {
+    repository: "erictli/scratch",
+    summary:
+      "A minimalist, offline-first markdown note-taking app for Mac",
+    contributions: [
+      "Add Windows support (#11) - Implemented cross-platform compatibility to enable Scratch to run on Windows, expanding its accessibility beyond macOS.",
+    ],
+    link: "https://github.com/erictli/scratch",
+  },
+  {
+    repository: "wespreadjam/jam-nodes",
+    summary: "Workflow nodes library for Jam framework with social media integrations",
+    contributions: [
+      "Add Twitter/X integration (#22) - Added 7 new Twitter/X operation nodes (tweet, like, retweet, DM, search, delete, user lookup), OAuth2 PKCE + OAuth 1.0a (HMAC-SHA1) credential support, Zod schemas, unit tests, and full CLI/web playground integration.",
+      "Add Discord integration (#24) - Added discord_send_message, discord_send_webhook, discord_create_thread nodes with bot token + webhook credentials, embed support, Zod schemas, unit tests, and CLI/web playground integration.",
+    ],
+    link: "https://github.com/wespreadjam/jam-nodes",
+  },
+  {
+    repository: "wespreadjam/jam-discord-bot",
+    summary: "jam bot is a discord bot that gamifies your community. it tracks messages, awards xp, manages referrals, and hands out jam-themed roles as members level up.",
+    contributions: [
+      "Add /rank progress bar + /8ball command (#5) - Implemented XP progress visualization with bar/emoji and Magic 8-Ball slash command with 20 themed responses.",
+      "Update /8ball to show question + answer (#6) - Enhanced embed to display user question and random response with footer.",
+      "Add welcome message for new members (#8) - Implemented simple 'welcome to Jam, [member]'.",
+      "Add /serverinfo + /countdown commands (#9) - Added server stats embed (members/channels/boosts) and UTC countdown embed with dynamic timestamps.",
+    ],
+    link: "https://github.com/wespreadjam/jam-discord-bot",
   },
 ];

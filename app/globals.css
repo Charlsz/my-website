@@ -94,6 +94,10 @@ body {
   margin-bottom: 30px;
 }
 
+.about-paragraph + .about-paragraph {
+  margin-top: 16px;
+}
+
 /* ── Projects ── */
 .project-images {
   width: 100%;
@@ -136,6 +140,17 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   color: #666;
+}
+
+.contribution-article {
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.contribution-list {
+  margin: 0 0 10px 20px;
+  padding: 0;
 }
 
 /* ── Contact ── */

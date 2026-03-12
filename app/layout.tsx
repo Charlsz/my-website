@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Serif } from "next/font/google";
+import { basePath } from "@/next.config";
 import "./globals.css";
 
 const notoSerif = Noto_Serif({
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "Home ~ Charlie",
   description: "Carlos Galvis — Software Engineering Student Portfolio",
   icons: {
-    icon: "/images/frieren-staff.png",
+    icon: `${basePath}/images/frieren-staff.png`,
   },
 };
 
