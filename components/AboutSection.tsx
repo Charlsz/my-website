@@ -3,17 +3,19 @@ export default function AboutSection() {
     <section className="section">
       <h2 className="section-title">About Me</h2>
       <div className="section-line" />
-      <p>
-        I love working on projects that are both functional and visually
-        interesting—anything from interactive simulators to sleek web interfaces
-        or automation tools.
+      {/* <p className="about-paragraph">
+        I'm a systems and computer engineering student from Colombia who loves building things that are both useful and enjoyable to use. 
+      </p> */}
+      <p className="about-paragraph">
+        I have experience in web development and AI training, 
+        working with Python, Java, JavaScript, Swift, SQL, and NoSQL 
+        in real projects. I've done full-stack work for clients, trained 
+        and evaluated AI models in Spanish/English, and handled customer support, 
+        which has made me better at communication and problem-solving. 
       </p>
-      <p>
-        What excites me most is mixing creativity with technical know-how.
-        I&apos;m not just about solving problems; I want to create stuff that
-        people connect with. Lately, I&apos;ve been diving into web engineering,
-        visual programming, UX, and applied AI—always curious, always building,
-        and always trying to bring value through technology.
+      <p className="about-paragraph">
+        I'm constantly learning, experimenting with new technologies, and 
+        looking for ways to turn ideas into products that add real value for people.
       </p>
     </section>
   );

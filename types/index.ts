@@ -7,3 +7,10 @@ export interface Project {
   alt?: string;
   link: string;
 }
+
+export interface Contribution {
+  repository: string;
+  summary: string;
+  contributions: string[];
+  link: string;
+}
