@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Project } from "@/types";
+import { basePath } from "@/next.config";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -18,13 +18,10 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="project-image">
         <a href={project.link} target="_blank" rel="noopener noreferrer">
-          <Image
-            src={project.image}
+          <img
+            src={`${basePath}${project.image}`}
             className="project-images"
             alt={project.alt || project.title}
-            width={600}
-            height={400}
-            unoptimized
           />
         </a>
       </div>
