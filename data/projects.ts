@@ -2,7 +2,7 @@ import { Contribution, Project } from "@/types";
 
 export const featuredProjects: Project[] = [
   {
-    title: "NoruSearch - Universal space data browser (+2 Stars on GitHub)",
+    title: "NoruSearch - Universal space data browser",
     summary:
       "Search, explore, and visualize NASA (and many more) datasets from a single interface",
     focus: "NASA Datasets, Space Visualization, Universal Search",
