@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { Noto_Serif } from "next/font/google";
 import { basePath } from "@/next.config";
-import "./globals.css";
-
-const notoSerif = Noto_Serif({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-});
+import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: "Home ~ Charlie",
-  description: "Carlos Galvis — Software Engineering Student Portfolio",
+  description: "Carlos Galvis — Portfolio",
   icons: {
     icon: `${basePath}/images/frieren-staff.png`,
   },
@@ -33,7 +26,7 @@ export default function RootLayout({
           referrerPolicy="no-referrer"
         />
       </head>
-      <body className={notoSerif.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

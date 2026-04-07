@@ -1,5 +1,6 @@
 export interface Project {
   title: string;
+  slug?: string;
   summary: string;
   focus: string;
   stack: string;
