@@ -1,5 +1,4 @@
 import { featuredProjects, academicProjects } from "@/data/projects";
-import { basePath } from "@/next.config";
 
 export async function generateStaticParams() {
   const allProjects = [...featuredProjects, ...academicProjects];
@@ -24,7 +23,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
           <h1 className="header-title">Project not found</h1>
         </header>
         <main>
-          <a href={`${basePath}/`} className="list-row" style={{ marginTop: '20px' }}>
+          <a href="/my-website/" className="list-row" style={{ marginTop: '20px' }}>
             <div className="list-name">← Back to home</div>
           </a>
         </main>
@@ -45,7 +44,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
             <div style={{ display: "flex", justifyContent: "center", width: "100%", marginBottom: "30px" }}>
               {project.image.endsWith(".mp4") || project.image.endsWith(".webm") ? (
                 <video
-                  src={`${basePath}${project.image}`}
+                  src={`/my-website${project.image}`}
                   style={{ 
                     width: "175%", /* <-- Ajusta SOLO este valor (ej: "80%" o "500px") para cambiar el tamaño */
                     height: "auto", 
@@ -58,7 +57,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
                 />
               ) : (
                 <img 
-                  src={`${basePath}${project.image}`} 
+                  src={`/my-website${project.image}`} 
                   alt={project.title} 
                   style={{ 
                     width: "200%", /* <-- Ajusta SOLO este valor (ej: "80%" o "500px") para cambiar el tamaño */
@@ -85,7 +84,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
 
           <div className="list-gap" />
           
-          <a href={`${basePath}/`} className="list-row" style={{ marginTop: '50px' }}>
+          <a href="/my-website/" className="list-row" style={{ marginTop: '50px' }}>
             <div className="list-name">← Back to home</div>
           </a>
         </section>

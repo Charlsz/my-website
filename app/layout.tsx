@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { basePath } from "@/next.config";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: "Home ~ Charlie",
   description: "Carlos Galvis — Portfolio",
   icons: {
-    icon: `${basePath}/images/frieren-staff.png`,
+    icon: "/my-website/images/frieren-staff.png",
   },
 };
 
