@@ -3,16 +3,18 @@ import { Contribution, Project } from "@/types";
 export const featuredProjects: Project[] = [
   {
     title: "NoruSearch - Universal space data browser",
+    slug: "norusearch",
     summary:
       "Search, explore, and visualize NASA (and many more) datasets from a single interface",
     focus: "NASA Datasets, Space Visualization, Universal Search",
     stack: "Next.js, TypeScript, React Query, Tailwind CSS, Recharts.",
-    image: "/images/norusearch.png",
+    image: "/images/norusearchvideo.mp4",
     alt: "NoruSearch Project",
     link: "https://www.norusearch.live/",
   },
   {
     title: "Structura - GitHub Repo Visualizer",
+    slug: "structura",
     summary:
       "Interactive tool for visualizing GitHub repositories with diagrams and data insights. Built to explore advanced web viz and data handling.",
     focus: "GitHub Visualization, Diagrams, Data Insights",
@@ -23,6 +25,7 @@ export const featuredProjects: Project[] = [
   },
   {
     title: "LoLForge - AI-Powered League of Legends Recap",
+    slug: "lolforge",
     summary:
       "Year-end performance analytics platform using AWS Bedrock AI to generate personalized insights for League of Legends players. Built for the Rift Rewind Hackathon 2025.",
     focus: "AI Insights, Gaming Analytics, Project",
@@ -33,6 +36,7 @@ export const featuredProjects: Project[] = [
   },
   {
     title: "Anime Dark Store Website",
+    slug: "anime-dark-store",
     summary:
       "E-commerce platform for anime merchandise with a dark-themed user interface.",
     focus: "Anime Merchandise, E-commerce",
@@ -42,6 +46,7 @@ export const featuredProjects: Project[] = [
   },
   {
     title: "HRG Soluciones S.A.S Website",
+    slug: "hrg-soluciones",
     summary:
       "Corporate website featuring electrical, construction, and maintenance services.",
     focus: "Corporate Website, Professional Services",
@@ -54,6 +59,7 @@ export const featuredProjects: Project[] = [
 export const academicProjects: Project[] = [
   {
     title: "SVG Half-tone Filter",
+    slug: "svg-half-tone",
     summary:
       "Interactive application that applies half-tone effects to images using advanced SVG filters and JavaScript.",
     focus: "SVG Filters, Image Processing",
@@ -63,6 +69,7 @@ export const academicProjects: Project[] = [
   },
   {
     title: "Rentzu - Rental Management Platform",
+    slug: "rentzu",
     summary:
       "Modern rental property management system with real-time updates and user authentication.",
     focus: "Property Management, Real Estate, SaaS",
@@ -73,6 +80,7 @@ export const academicProjects: Project[] = [
   },
   {
     title: "Slider 3D Design",
+    slug: "slider-3d",
     summary: "Website - 3D slider effect using CSS.",
     focus: "3D Design",
     stack: "HTML, CSS",
@@ -81,6 +89,7 @@ export const academicProjects: Project[] = [
   },
   {
     title: "Host Roble - University Platform Integration",
+    slug: "host-roble",
     summary:
       "Microservices-based authentication system integrating with Universidad del Norte's Roble platform using Docker containers.",
     focus: "Authentication, Microservices, University Integration",
