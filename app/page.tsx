@@ -37,7 +37,7 @@ export default function Home() {
       <header className="header">
         <h1 className="header-title">Carlos Galvis{" "}
             <img 
-              src="/images/cat-pixel.gif" 
+              src="/my-website/images/cat-pixel.gif" 
               alt="Pixel cat" 
               style={{ width: "50px", height: "50px" }} 
             />
