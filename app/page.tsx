@@ -75,17 +75,35 @@ export default function Home() {
           <h2 className="section-title">My Work</h2>
 
           <div className="list-container">
-            {featuredProjects.map((project) => (
-              project.slug ? (
+            {featuredProjects.map((project, index) => {
+              const isRight = index % 2 === 0;
+              const hasVideo = project.image?.endsWith(".mp4");
+              
+              const innerContent = (
+                <>
+                  <div className="list-name">
+                    {project.title.split(" -")[0] || project.title}
+                  </div>
+                  <div className="list-date">↗</div>
+                  {project.image && (
+                    <div className={`project-preview ${isRight ? 'preview-right' : 'preview-left'}`}>
+                      {hasVideo ? (
+                        <video src={`/my-website${project.image}`} autoPlay loop muted playsInline className="preview-media" />
+                      ) : (
+                        <img src={`/my-website${project.image}`} alt={project.alt || project.title} className="preview-media" />
+                      )}
+                    </div>
+                  )}
+                </>
+              );
+
+              return project.slug ? (
                 <Link
                   key={project.title}
                   href={`/${project.slug}`}
                   className="list-row"
                 >
-                  <div className="list-name">
-                    {project.title.split(" -")[0] || project.title}
-                  </div>
-                  <div className="list-date">↗</div>
+                  {innerContent}
                 </Link>
               ) : (
                 <a
@@ -95,30 +113,45 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="list-row"
                 >
-                  <div className="list-name">
-                    {project.title.split(" -")[0] || project.title}
-                  </div>
-                  <div className="list-date">↗</div>
+                  {innerContent}
                 </a>
-              )
-            ))}
+              );
+            })}
           </div>
 
           <div className="list-gap" />
           <h2 className="section-title">Academic & Personal</h2>
 
           <div className="list-container">
-            {academicProjects.map((project) => (
-              project.slug ? (
+            {academicProjects.map((project, index) => {
+              const isRight = index % 2 === 0;
+              const hasVideo = project.image?.endsWith(".mp4");
+              
+              const innerContent = (
+                <>
+                  <div className="list-name">
+                    {project.title.split(" -")[0] || project.title}
+                  </div>
+                  <div className="list-date">↗</div>
+                  {project.image && (
+                    <div className={`project-preview ${isRight ? 'preview-right' : 'preview-left'}`}>
+                      {hasVideo ? (
+                        <video src={`/my-website${project.image}`} autoPlay loop muted playsInline className="preview-media" />
+                      ) : (
+                        <img src={`/my-website${project.image}`} alt={project.alt || project.title} className="preview-media" />
+                      )}
+                    </div>
+                  )}
+                </>
+              );
+
+              return project.slug ? (
                 <Link
                   key={project.title}
                   href={`/${project.slug}`}
                   className="list-row"
                 >
-                  <div className="list-name">
-                    {project.title.split(" -")[0] || project.title}
-                  </div>
-                  <div className="list-date">↗</div>
+                  {innerContent}
                 </Link>
               ) : (
                 <a
@@ -128,13 +161,10 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="list-row"
                 >
-                  <div className="list-name">
-                    {project.title.split(" -")[0] || project.title}
-                  </div>
-                  <div className="list-date">↗</div>
+                  {innerContent}
                 </a>
-              )
-            ))}
+              );
+            })}
           </div>
 
           <div className="list-gap" />
