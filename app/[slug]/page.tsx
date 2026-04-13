@@ -53,12 +53,8 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
             <div style={{ display: "flex", justifyContent: "center", width: "100%", marginBottom: "30px" }}>
               {project.image.endsWith(".mp4") || project.image.endsWith(".webm") ? (
                 <video
+                  className="project-media project-media-video"
                   src={`${basePath}${project.image}`}
-                  style={{ 
-                    width: "175%", /* <-- Ajusta SOLO este valor (ej: "80%" o "500px") para cambiar el tamaño */
-                    height: "auto", 
-                    pointerEvents: "none" 
-                  }}
                   autoPlay
                   loop
                   muted
@@ -66,12 +62,9 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
                 />
               ) : (
                 <img 
+                  className="project-media project-media-img"
                   src={`${basePath}${project.image}`} 
                   alt={project.title} 
-                  style={{ 
-                    width: "200%", /* <-- Ajusta SOLO este valor (ej: "80%" o "500px") para cambiar el tamaño */
-                    height: "auto" 
-                  }} 
                 />
               )}
             </div>

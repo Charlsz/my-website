@@ -22,7 +22,7 @@ body {
   padding: 0 24px;
 }
 
-/* ── Links globales ── */
+/* â”€â”€ Links globales â”€â”€ */
 a {
   color: #111111;
   text-decoration: none;
@@ -51,7 +51,7 @@ a:hover {
   text-decoration-color: #111111;
 }
 
-/* ── Estructura ── */
+/* â”€â”€ Estructura â”€â”€ */
 .list-section {
   margin-top: 60px;
 }
@@ -108,7 +108,7 @@ a:hover {
   margin-top: 40px;
 }
 
-/* ── Lista ── */
+/* â”€â”€ Lista â”€â”€ */
 .list-container:hover .list-row {
   opacity: 0.3;
 }
@@ -161,7 +161,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* ── Hover Previews ── */
+/* â”€â”€ Hover Previews â”€â”€ */
 .project-preview {
   position: absolute;
   top: 50%;
@@ -207,7 +207,7 @@ a:hover {
   }
 }
 
-/* ── Projects ── */
+/* â”€â”€ Projects â”€â”€ */
 .project-images {
   width: 100%;
   height: auto;
@@ -263,7 +263,7 @@ a:hover {
   padding: 0;
 }
 
-/* ── Contact ── */
+/* â”€â”€ Contact â”€â”€ */
 .contact-section {
   border-bottom: none;
 }
@@ -294,7 +294,7 @@ a:hover {
   opacity: 1;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 768px) {
   .container {
     margin: 40px auto 40px;
@@ -326,3 +326,29 @@ a:hover {
     margin-left: auto;
   }
 }
+.project-media {
+  max-width: 100vw;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .project-media-video {
+    width: 175%;
+    pointer-events: none;
+  }
+  .project-media-img {
+    width: 200%;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-media-video,
+  .project-media-img {
+    width: 100%;
+  }
+  .project-media-video {
+    pointer-events: none;
+  }
+}
+
+
