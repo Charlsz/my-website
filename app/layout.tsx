@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
-  title: "Home ~ Charlie",
+  title: "Charlie's site",
   description: "Carlos Galvis — Portfolio",
   icons: {
     icon: "/my-website/images/frieren-staff.png",
