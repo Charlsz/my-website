@@ -12,6 +12,9 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [time, setTime] = useState<string>("");
 
+  const isProd = process.env.NODE_ENV === "production";
+  const basePath = isProd ? "/my-website" : "";
+
   useEffect(() => {
     setMounted(true);
     
@@ -37,7 +40,7 @@ export default function Home() {
       <header className="header">
         <h1 className="header-title">Carlos Galvis{" "}
             <img 
-              src="/my-website/images/cat-pixel.gif" 
+              src={`${basePath}/images/cat-pixel.gif`}
               alt="Pixel cat" 
               style={{ width: "50px", height: "50px" }} 
             />
@@ -88,9 +91,9 @@ export default function Home() {
                   {project.image && (
                     <div className={`project-preview ${isRight ? 'preview-right' : 'preview-left'}`}>
                       {hasVideo ? (
-                        <video src={`/my-website${project.image}`} autoPlay loop muted playsInline className="preview-media" />
+                        <video src={`${basePath}${project.image}`} autoPlay loop muted playsInline className="preview-media" />
                       ) : (
-                        <img src={`/my-website${project.image}`} alt={project.alt || project.title} className="preview-media" />
+                        <img src={`${basePath}${project.image}`} alt={project.alt || project.title} className="preview-media" />
                       )}
                     </div>
                   )}
@@ -136,9 +139,9 @@ export default function Home() {
                   {project.image && (
                     <div className={`project-preview ${isRight ? 'preview-right' : 'preview-left'}`}>
                       {hasVideo ? (
-                        <video src={`/my-website${project.image}`} autoPlay loop muted playsInline className="preview-media" />
+                        <video src={`${basePath}${project.image}`} autoPlay loop muted playsInline className="preview-media" />
                       ) : (
-                        <img src={`/my-website${project.image}`} alt={project.alt || project.title} className="preview-media" />
+                        <img src={`${basePath}${project.image}`} alt={project.alt || project.title} className="preview-media" />
                       )}
                     </div>
                   )}
@@ -191,6 +194,22 @@ export default function Home() {
           <p className="footer-text">
             {mounted && time ? `${time} in Colombia` : "Colombia"}
           </p>
+          
+          <a 
+            href="https://www.instagram.com/cgalvis._/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ display: "block", marginTop: "40px", width: "100%" }}
+          >
+            <video 
+              src={`${basePath}/video/charlie.mp4`}
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              style={{ width: "100%", height: "auto", borderRadius: "12px", objectFit: "cover" }}
+            />
+          </a>
         </footer>
       </main>
     </div>

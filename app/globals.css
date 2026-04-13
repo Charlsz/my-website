@@ -13,6 +13,7 @@ body {
   font-size: 15px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 .container {
@@ -296,41 +297,32 @@ a:hover {
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .container {
-    padding: 15px;
+    margin: 40px auto 40px;
+    padding: 0 20px;
   }
 
-  .site-title {
-    font-size: 2.5rem;
+  .header {
+    margin-bottom: 40px;
   }
 
-  .lead-paragraph {
-    font-size: 18px;
+  .footer {
+    margin-top: 60px;
   }
 
-  .section-title {
-    font-size: 20px;
-  }
-
-  .contact-icons {
-    gap: 20px;
-  }
-
-  .project-article {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .project-image {
-    order: -1;
+  /* Reduce spacing between sections slightly */
+  .about-section {
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .site-title {
-    font-size: 2rem;
+  .list-row {
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
-  .lead-paragraph {
-    font-size: 16px;
+  .list-date {
+    /* Mantiene la flechita a la derecha, pero da espacio si el nombre del proyecto es muy largo */
+    margin-left: auto;
   }
 }

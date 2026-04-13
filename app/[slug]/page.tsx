@@ -1,4 +1,5 @@
 import { featuredProjects, academicProjects } from "@/data/projects";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const allProjects = [...featuredProjects, ...academicProjects];
@@ -16,23 +17,31 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
     (p) => p.slug === slug
   );
 
+  const isProd = process.env.NODE_ENV === "production";
+  const basePath = isProd ? "/my-website" : "";
+
   if (!project) {
     return (
       <div className="container">
+        <div style={{ marginBottom: "40px" }}>
+          <Link href="/" className="list-row" style={{ display: "inline-flex", padding: 0 }}>
+            <div className="list-name">← Back to home</div>
+          </Link>
+        </div>
         <header className="header">
           <h1 className="header-title">Project not found</h1>
         </header>
-        <main>
-          <a href="/my-website/" className="list-row" style={{ marginTop: '20px' }}>
-            <div className="list-name">← Back to home</div>
-          </a>
-        </main>
       </div>
     );
   }
 
   return (
     <div className="container">
+      <div style={{ marginBottom: "40px" }}>
+        <Link href="/" className="list-row" style={{ display: "inline-flex", padding: 0 }}>
+          <div className="list-name">← Back to home</div>
+        </Link>
+      </div>
       <header className="header">
         <h1 className="header-title">{project.title}</h1>
         {project.stack && <p className="header-subtitle">{project.stack}</p>}
@@ -44,7 +53,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
             <div style={{ display: "flex", justifyContent: "center", width: "100%", marginBottom: "30px" }}>
               {project.image.endsWith(".mp4") || project.image.endsWith(".webm") ? (
                 <video
-                  src={`/my-website${project.image}`}
+                  src={`${basePath}${project.image}`}
                   style={{ 
                     width: "175%", /* <-- Ajusta SOLO este valor (ej: "80%" o "500px") para cambiar el tamaño */
                     height: "auto", 
@@ -57,7 +66,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
                 />
               ) : (
                 <img 
-                  src={`/my-website${project.image}`} 
+                  src={`${basePath}${project.image}`} 
                   alt={project.title} 
                   style={{ 
                     width: "200%", /* <-- Ajusta SOLO este valor (ej: "80%" o "500px") para cambiar el tamaño */
@@ -81,12 +90,6 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
               </a>
             </p>
           )}
-
-          <div className="list-gap" />
-          
-          <a href="/my-website/" className="list-row" style={{ marginTop: '50px' }}>
-            <div className="list-name">← Back to home</div>
-          </a>
         </section>
       </main>
     </div>
