@@ -46,7 +46,7 @@ export default function Home() {
             />
         </h1>
         <p className="header-subtitle">
-          Updated {new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+          Updated {process.env.NEXT_PUBLIC_LAST_UPDATED}
         </p>
       </header>
 
