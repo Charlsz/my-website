@@ -58,14 +58,14 @@ export const featuredProjects: Project[] = [
 
 export const academicProjects: Project[] = [
   {
-    title: "SVG Half-tone Filter",
-    slug: "svg-half-tone",
+    title: "Image Filter",
+    slug: "image-filter",
     summary:
       "Interactive application that applies half-tone effects to images using advanced SVG filters and JavaScript.",
-    focus: "SVG Filters, Image Processing",
+    focus: "SVG Filters, Image Processing, ASCII",
     stack: "HTML, CSS, JavaScript",
     image: "/images/svg-filter.png",
-    link: "https://charlsz.github.io/SVG-image-filter/",
+    link: "https://charlsz.github.io/Image-filter/",
   },
   {
     title: "Rentzu - Rental Management Platform",
