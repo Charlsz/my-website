@@ -61,7 +61,7 @@ export const academicProjects: Project[] = [
     title: "Image Filter",
     slug: "image-filter",
     summary:
-      "Interactive application that applies half-tone effects to images using advanced SVG filters and JavaScript.",
+      "Interactive application that applies ASCII, half-tone effects to images using advanced SVG filters and JavaScript.",
     focus: "SVG Filters, Image Processing, ASCII",
     stack: "HTML, CSS, JavaScript",
     image: "/images/svg-filter.png",
