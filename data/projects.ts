@@ -2,6 +2,18 @@ import { Contribution, Project } from "@/types";
 
 export const featuredProjects: Project[] = [
   {
+    title: "Ferret - Local-first AI workspace explorer",
+    slug: "ferret",
+    summary:
+      "Local-first web app for browsing private workspaces and asking built-in AI to explain files, summarize code, and locate content by name, path, or text.",
+    focus: "Local-first Search, AI File Exploration, Privacy",
+    stack:
+      "Next.js, Web Workers, @mlc-ai/web-llm",
+    image: "/images/ferret.png",
+    alt: "Ferret Project",
+    link: "https://tryferret.vercel.app/",
+  },
+  {
     title: "NoruSearch - Universal space data browser",
     slug: "norusearch",
     summary:
@@ -33,16 +45,6 @@ export const featuredProjects: Project[] = [
     image: "/images/lolforge.png",
     alt: "LoLForge Project",
     link: "https://github.com/Charlsz/lolforge",
-  },
-  {
-    title: "Anime Dark Store Website",
-    slug: "anime-dark-store",
-    summary:
-      "E-commerce platform for anime merchandise with a dark-themed user interface.",
-    focus: "Anime Merchandise, E-commerce",
-    stack: "React, Next.js, Supabase, Vercel Hosting",
-    image: "/images/animedark.png",
-    link: "https://animedark-xi.vercel.app/",
   },
   {
     title: "HRG Soluciones S.A.S Website",
@@ -97,6 +99,27 @@ export const academicProjects: Project[] = [
     image: "/images/host_roble.png",
     alt: "Host Roble Project",
     link: "https://github.com/Charlsz/host_roble",
+  },
+  {
+    title: "LoLForge - AI-Powered League of Legends Recap",
+    slug: "lolforge",
+    summary:
+      "Year-end performance analytics platform using AWS Bedrock AI to generate personalized insights for League of Legends players. Built for the Rift Rewind Hackathon 2025.",
+    focus: "AI Insights, Gaming Analytics, Project",
+    stack: "Next.js, TypeScript, AWS Bedrock, Riot Games API, AWS Amplify",
+    image: "/images/lolforge.png",
+    alt: "LoLForge Project",
+    link: "https://github.com/Charlsz/lolforge",
+  },
+  {
+    title: "Anime Dark Store Website",
+    slug: "anime-dark-store",
+    summary:
+      "E-commerce platform for anime merchandise with a dark-themed user interface.",
+    focus: "Anime Merchandise, E-commerce",
+    stack: "React, Next.js, Supabase, Vercel Hosting",
+    image: "/images/animedark.png",
+    link: "https://animedark-xi.vercel.app/",
   },
 ];
 
