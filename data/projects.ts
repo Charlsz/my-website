@@ -2,6 +2,17 @@ import { Contribution, Project } from "@/types";
 
 export const featuredProjects: Project[] = [
   {
+    title: "NoruSearch - Universal space data browser",
+    slug: "norusearch",
+    summary:
+      "Search, explore, and visualize NASA (and many more) datasets from a single interface",
+    focus: "NASA Datasets, Space Visualization, Universal Search",
+    stack: "Next.js, TypeScript, React Query, Tailwind CSS, Recharts.",
+    image: "/images/norusearchvideo.mp4",
+    alt: "NoruSearch Project",
+    link: "https://www.norusearch.live/",
+  },
+  {
     title: "Ferret - Local-first AI workspace explorer",
     slug: "ferret",
     summary:
@@ -12,17 +23,6 @@ export const featuredProjects: Project[] = [
     image: "/images/ferret.png",
     alt: "Ferret Project",
     link: "https://tryferret.vercel.app/",
-  },
-  {
-    title: "NoruSearch - Universal space data browser",
-    slug: "norusearch",
-    summary:
-      "Search, explore, and visualize NASA (and many more) datasets from a single interface",
-    focus: "NASA Datasets, Space Visualization, Universal Search",
-    stack: "Next.js, TypeScript, React Query, Tailwind CSS, Recharts.",
-    image: "/images/norusearchvideo.mp4",
-    alt: "NoruSearch Project",
-    link: "https://www.norusearch.live/",
   },
   {
     title: "Structura - GitHub Repo Visualizer",
@@ -36,15 +36,15 @@ export const featuredProjects: Project[] = [
     link: "https://structura-git.vercel.app/",
   },
   {
-    title: "LoLForge - AI-Powered League of Legends Recap",
-    slug: "lolforge",
+    title: "Habitta - Property Management Platform",
+    slug: "habitta",
     summary:
-      "Year-end performance analytics platform using AWS Bedrock AI to generate personalized insights for League of Legends players. Built for the Rift Rewind Hackathon 2025.",
-    focus: "AI Insights, Gaming Analytics, Project",
-    stack: "Next.js, TypeScript, AWS Bedrock, Riot Games API, AWS Amplify",
-    image: "/images/lolforge.png",
-    alt: "LoLForge Project",
-    link: "https://github.com/Charlsz/lolforge",
+      "All-in-one platform to centralize residential property management in Colombia. Features an AI assistant that creates tickets, generates legal documents, and sends notifications via Telegram — replacing WhatsApp groups and Excel sheets.",
+    focus: "AI Assistant, SaaS, Property Management",
+    stack: "Next.js, TypeScript, Supabase, OpenRouter, Telegram Bot API, Tailwind CSS, Vercel",
+    image: "/images/habitta.png",
+    alt: "Habitta Project",
+    link: "https://github.com/Charlsz/habitta",
   },
   {
     title: "HRG Soluciones S.A.S Website",
