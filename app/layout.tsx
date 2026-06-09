@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { PixelCursorTrail } from "@/components/ui/pixel-trail";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="stylesheet"
@@ -28,6 +29,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <PixelCursorTrail />
         <Analytics />
       </body>
     </html>
