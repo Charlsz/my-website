@@ -11,6 +11,10 @@
   --color-ring: oklch(0.2 0 0);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -86,14 +90,14 @@ a:hover {
   margin: 0;
 }
 
-.section-title-link {
+.section-title-row a {
   font-size: 13px;
   color: #a1a1aa;
   text-decoration: none;
   border-bottom: none;
 }
 
-.section-title-link:hover {
+.section-title-row a:hover {
   color: #111111;
   opacity: 1;
   border-bottom: none;
@@ -164,6 +168,32 @@ a:hover {
   font-weight: 400;
 }
 
+.bg-stars-left {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 70vw;
+  height: 90vh;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.28;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.bg-stars-right {
+  position: fixed;
+  top: -10vh;
+  right: -25vw;
+  width: 70vw;
+  height: 90vh;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.28;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 @media (max-width: 768px) {
   .container {
     margin: 40px auto 40px;
@@ -180,6 +210,15 @@ a:hover {
 
   .about-section {
     margin-bottom: 40px;
+  }
+
+  .bg-stars-right {
+    right: -10vw;
+    width: 50vw;
+  }
+
+  .bg-stars-left {
+    width: 100vw;
   }
 }
 
@@ -271,7 +310,7 @@ a:hover {
 
 .project-card-tag {
   font-size: 11px;
-  color: #a1a1aa;
+  color: #7a7a80;
   background: #f4f4f5;
   padding: 2px 8px;
   border-radius: 4px;
@@ -289,10 +328,10 @@ a:hover {
   align-items: center;
   gap: 6px;
   font-size: 13px;
-  color: #a1a1aa;
+  color: #525253;
   text-decoration: none;
   padding: 6px 12px;
-  border: 1px solid #eaeaea;
+  border: 1px solid #cccccc;
   border-radius: 6px;
 }
 

@@ -44,7 +44,7 @@ export default function Home() {
         <section style={{ marginTop: 80, marginBottom: 80 }}>
           <div className="section-title-row">
             <h2 className="section-title">Projects</h2>
-            <a className="section-title-link" href="https://github.com/Charlsz" target="_blank" rel="noopener noreferrer">See more projects →</a>
+            <a href="https://github.com/Charlsz" target="_blank" rel="noopener noreferrer">See more projects →</a>
           </div>
           <Tabs defaultValue="Web Apps">
             <TabsList>
