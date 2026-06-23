@@ -16,7 +16,6 @@ const TRAIL_LENGTH = 40
 const FADE_SPEED = 0.04
 
 export function PixelCursorTrail() {
-  const [mounted, setMounted] = useState(false)
   const [pixels, setPixels] = useState<Pixel[]>([])
   const pixelIdRef = useRef(0)
   const lastPositionRef = useRef({ x: 0, y: 0 })
@@ -33,11 +32,6 @@ export function PixelCursorTrail() {
   }, [])
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  useEffect(() => {
-    if (!mounted) return
     const handleMouseMove = (e: MouseEvent) => {
       const x = e.clientX
       const y = e.clientY
@@ -76,9 +70,7 @@ export function PixelCursorTrail() {
         cancelAnimationFrame(animationRef.current)
       }
     }
-  }, [mounted, createPixel])
-
-  if (!mounted) return null
+  }, [createPixel])
 
   return (
     <div

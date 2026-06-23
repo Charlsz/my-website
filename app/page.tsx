@@ -1,39 +1,12 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import {
-  featuredProjects,
-  academicProjects,
-  openSourceContributions,
-} from "@/data/projects";
+import { Clock } from "./clock";
+import { projectsByCategory } from "@/data/projects";
+import { Border1 } from "@/components/ui/border1";
+import { Tabs, TabsList, TabsTab, TabsPanel } from "@/components/ui/tabs";
+import { ProjectMedia } from "@/components/ui/project-media";
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
-  const [time, setTime] = useState<string>("");
-
   const isProd = process.env.NODE_ENV === "production";
   const basePath = isProd ? "/my-website" : "";
-
-  useEffect(() => {
-    setMounted(true);
-    
-    const updateTime = () => {
-      const now = new Date();
-      const formatter = new Intl.DateTimeFormat("en-US", {
-        timeZone: "America/Bogota",
-        hour12: false,
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-      });
-      setTime(formatter.format(now));
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="container">
@@ -53,146 +26,85 @@ export default function Home() {
       <main>
         <section className="about-section">
           <p>
-            I’m a Systems and Computer Engineering student at Universidad del Norte in Barranquilla, Colombia.
+            <strong><em>Full-stack / design engineer.</em></strong>
           </p>
           <p>
-            I currently work at my personal project <a href="https://www.norusearch.live/" target="_blank" rel="noopener noreferrer">Noru Search</a>,{" "} 
-            where I develop tools and applications related to astrophysics and astronomy. 
-            I focus on creating intuitive interfaces for exploring astronomical data in a simpler way.
-          </p>
-          <p>
-            I'm constantly learning, experimenting with new technologies, and 
-            looking for ways to turn ideas into products that add real value for people.
+            I run <a href="https://github.com/NoruLabs" target="_blank" rel="noopener noreferrer">NoruLabs</a> where I build tools around space and astronomy, starting with <a href="https://www.norusearch.live/" target="_blank" rel="noopener noreferrer">NoruSearch</a>, a universal interface for exploring NASA and astronomical datasets. I participate in hackathons, contribute to open source, and take on freelance projects. Always looking for the next thing worth building.
           </p>
           <p>
             You can find me on <a href="https://x.com/charlswfeelings" target="_blank" rel="noopener noreferrer">X</a>,{" "}
             <a href="https://linkedin.com/in/cgalvisp" target="_blank" rel="noopener noreferrer">LinkedIn</a>,{" "}
-            <a href="https://github.com/Charlsz" target="_blank" rel="noopener noreferrer">GitHub</a>,{" "}
+            <a href="https://github.com/NoruLabs" target="_blank" rel="noopener noreferrer">GitHub</a>,{" "}
             <a href="https://www.instagram.com/cgalvis._/" target="_blank" rel="noopener noreferrer">Instagram</a>,{" "}
             <a href="https://www.youtube.com/@charlswfeelings" target="_blank" rel="noopener noreferrer">YouTube</a>,{" "}
             or reach me via <a href="mailto:cgalvis21_@hotmail.com">email</a>.
           </p>
         </section>
 
-        <section className="list-section">
-          <h2 className="section-title">My Work</h2>
-
-          <div className="list-container">
-            {featuredProjects.map((project, index) => {
-              const isRight = index % 2 === 0;
-              const hasVideo = project.image?.endsWith(".mp4");
-              
-              const innerContent = (
-                <>
-                  <div className="list-name">
-                    {project.title.split(" -")[0] || project.title}
-                  </div>
-                  <div className="list-date">↗</div>
-                  {project.image && (
-                    <div className={`project-preview ${isRight ? 'preview-right' : 'preview-left'}`}>
-                      {hasVideo ? (
-                        <video src={`${basePath}${project.image}`} autoPlay loop muted playsInline className="preview-media" />
-                      ) : (
-                        <img src={`${basePath}${project.image}`} alt={project.alt || project.title} className="preview-media" />
-                      )}
-                    </div>
-                  )}
-                </>
-              );
-
-              return project.slug ? (
-                <Link
-                  key={project.title}
-                  href={`/${project.slug}`}
-                  className="list-row"
-                >
-                  {innerContent}
-                </Link>
-              ) : (
-                <a
-                  key={project.title}
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="list-row"
-                >
-                  {innerContent}
-                </a>
-              );
-            })}
+        <section style={{ marginTop: 80, marginBottom: 80 }}>
+          <div className="section-title-row">
+            <h2 className="section-title">Projects</h2>
+            <a className="section-title-link" href="https://github.com/Charlsz" target="_blank" rel="noopener noreferrer">See more projects →</a>
           </div>
-
-          <div className="list-gap" />
-          <h2 className="section-title">Academic & Personal</h2>
-
-          <div className="list-container">
-            {academicProjects.map((project, index) => {
-              const isRight = index % 2 === 0;
-              const hasVideo = project.image?.endsWith(".mp4");
-              
-              const innerContent = (
-                <>
-                  <div className="list-name">
-                    {project.title.split(" -")[0] || project.title}
-                  </div>
-                  <div className="list-date">↗</div>
-                  {project.image && (
-                    <div className={`project-preview ${isRight ? 'preview-right' : 'preview-left'}`}>
-                      {hasVideo ? (
-                        <video src={`${basePath}${project.image}`} autoPlay loop muted playsInline className="preview-media" />
-                      ) : (
-                        <img src={`${basePath}${project.image}`} alt={project.alt || project.title} className="preview-media" />
-                      )}
+          <Tabs defaultValue="Web Apps">
+            <TabsList>
+              {projectsByCategory.map((cat) => (
+                <TabsTab key={cat.name} value={cat.name}>{cat.name}</TabsTab>
+              ))}
+            </TabsList>
+            {projectsByCategory.map((cat) => (
+              <TabsPanel key={cat.name} value={cat.name}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 24 }}>
+                  {cat.projects.map((p) => (
+                    <div key={p.title} className="project-card">
+                      <div className="project-card-inner">
+                        <Border1 />
+                      </div>
+                      <div className="project-card-content">
+                        <ProjectMedia
+                          src={p.image ? `${basePath}${p.image}` : undefined}
+                          alt={p.alt || p.title}
+                          isVideo={!!(p.image && (p.image.endsWith(".mp4") || p.image.endsWith(".webm")))}
+                          link={p.link}
+                        />
+                        <h4 className="project-card-title">{p.title}</h4>
+                        {p.summary && <p className="project-card-summary">{p.summary}</p>}
+                        {p.stack && (
+                          <div className="project-card-stack">
+                            {p.stack.split(", ").map((t) => (
+                              <span key={t} className="project-card-tag">{t}</span>
+                            ))}
+                          </div>
+                        )}
+                        {(p.github || p.link) && (
+                          <div className="project-card-actions">
+                            {p.github && (
+                              <a href={p.github} target="_blank" rel="noopener noreferrer" className="project-card-btn">
+                                <img src="https://cdn.simpleicons.org/github" alt="" className="project-card-btn-icon" />
+                                Github
+                              </a>
+                            )}
+                            {p.link && (
+                              <a href={p.link} target="_blank" rel="noopener noreferrer" className="project-card-btn project-card-btn-live">
+                                <svg className="project-card-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                Live
+                              </a>
+                            )}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  )}
-                </>
-              );
-
-              return project.slug ? (
-                <Link
-                  key={project.title}
-                  href={`/${project.slug}`}
-                  className="list-row"
-                >
-                  {innerContent}
-                </Link>
-              ) : (
-                <a
-                  key={project.title}
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="list-row"
-                >
-                  {innerContent}
-                </a>
-              );
-            })}
-          </div>
-
-          <div className="list-gap" />
-          <h2 className="section-title">Contributions</h2>
-
-          <div className="list-container">
-            {openSourceContributions.map((item) => (
-              <a
-                key={item.repository}
-                href={item.link || `https://github.com/${item.repository}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="list-row"
-              >
-                <div className="list-name">{item.repository}</div>
-                <div className="list-date">↗</div>
-              </a>
+                  ))}
+                </div>
+              </TabsPanel>
             ))}
-          </div>
+          </Tabs>
         </section>
 
         <footer className="footer">
           <div className="footer-line" />
           <p className="footer-text">
-            {mounted && time ? `${time} in Colombia` : "Colombia"}
+            <Clock />
           </p>
           
           <a 

@@ -1,17 +1,16 @@
-export interface Project {
-  title: string;
-  slug?: string;
-  summary: string;
-  focus: string;
-  stack: string;
-  image: string;
-  alt?: string;
-  link: string;
+export interface ProjectCard {
+  title: string
+  slug?: string
+  summary: string
+  focus?: string
+  stack?: string
+  image?: string
+  link?: string
+  github?: string
+  alt?: string
 }
 
-export interface Contribution {
-  repository: string;
-  summary: string;
-  contributions: string[];
-  link: string;
+export interface ProjectCategory {
+  name: string
+  projects: ProjectCard[]
 }

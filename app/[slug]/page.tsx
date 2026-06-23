@@ -1,8 +1,9 @@
-import { featuredProjects, academicProjects } from "@/data/projects";
+import { projectsByCategory } from "@/data/projects";
 import Link from "next/link";
 
+const allProjects = projectsByCategory.flatMap((c) => c.projects);
+
 export async function generateStaticParams() {
-  const allProjects = [...featuredProjects, ...academicProjects];
   return allProjects
     .filter((p) => p.slug)
     .map((p) => ({
@@ -13,9 +14,7 @@ export async function generateStaticParams() {
 export default async function Project({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const { slug } = resolvedParams;
-  const project = [...featuredProjects, ...academicProjects].find(
-    (p) => p.slug === slug
-  );
+  const project = allProjects.find((p) => p.slug === slug);
 
   const isProd = process.env.NODE_ENV === "production";
   const basePath = isProd ? "/my-website" : "";
@@ -79,7 +78,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
           {project.link && (
             <p style={{ marginTop: "30px" }}>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                View Project ↗
+                View Project
               </a>
             </p>
           )}

@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
+import { Inter } from "next/font/google";
 import { PixelCursorTrail } from "@/components/ui/pixel-trail";
+import BackgroundStars from "@/components/ui/backgroundstars";
+import BackgroundStars2 from "@/components/ui/backgroundstars2";
 import "@/app/globals.css";
+
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Charlie's site",
@@ -18,19 +22,38 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-      </head>
-      <body>
+      <body className={inter.className}>
         {children}
         <PixelCursorTrail />
-        <Analytics />
+        <div style={{ 
+            position: "fixed", 
+            bottom: 0, 
+            left: 0, 
+            width: "70vw", 
+            height: "90vh", 
+            zIndex: -1, 
+            pointerEvents: "none", 
+            opacity: 0.28,
+            backdropFilter: "blur(10px)", // Agrega el desenfoque al fondo
+            WebkitBackdropFilter: "blur(10px)" // Compatibilidad con Safari
+          }}>
+
+          <BackgroundStars />
+        </div>
+        <div style={{ 
+            position: "fixed", 
+            top: "-10vh", 
+            right: "-25vw", 
+            width: "70vw", 
+            height: "90vh", 
+            zIndex: -1, 
+            pointerEvents: "none", 
+            opacity: 0.28,
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)"
+          }}>
+          <BackgroundStars2 />
+        </div>
       </body>
     </html>
   );
