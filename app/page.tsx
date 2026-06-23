@@ -11,12 +11,9 @@ export default function Home() {
   return (
     <div className="container">
       <header className="header">
-        <h1 className="header-title">Carlos Galvis{" "}
-            <img 
-              src={`${basePath}/images/cat-pixel.gif`}
-              alt="Pixel cat" 
-              style={{ width: "50px", height: "50px" }} 
-            />
+        <h1 className="header-title">
+          Carlos Galvis
+          <img src={`${basePath}/images/cat-pixel.gif`} alt="" width={50} height={50} />
         </h1>
         <p className="header-subtitle">
           Updated {process.env.NEXT_PUBLIC_LAST_UPDATED}

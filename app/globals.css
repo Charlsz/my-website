@@ -116,9 +116,20 @@ a:hover {
 }
 
 .header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 20px;
   font-weight: 500;
   color: #111111;
+
+}
+
+.header-title img {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  transform: translateY(-15px);
 }
 
 .header-subtitle {
@@ -213,12 +224,14 @@ a:hover {
   }
 
   .bg-stars-right {
-    right: -10vw;
-    width: 50vw;
+    display: none;
   }
 
   .bg-stars-left {
     width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: auto;
   }
 }
 
