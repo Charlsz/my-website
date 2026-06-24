@@ -182,30 +182,35 @@ a:hover {
 :root {
   --bg-left: 600px;
   --bg-right: 450px;
+  --star-scale: 1.5;
 }
 
 .bg-stars-left {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: -40px;
+  left: 0px;
   width: var(--bg-left);
   height: var(--bg-left);
   z-index: -1;
   pointer-events: none;
   opacity: 0.28;
   overflow: hidden;
+  transform: scale(var(--star-scale, 1.5));
+  transform-origin: bottom left;
 }
 
 .bg-stars-right {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   width: var(--bg-right);
   height: var(--bg-right);
   z-index: -1;
   pointer-events: none;
   opacity: 0.28;
   overflow: hidden;
+  transform: scale(var(--star-scale, 1.5));
+  transform-origin: top right;
 }
 
 @media (max-width: 768px) {
