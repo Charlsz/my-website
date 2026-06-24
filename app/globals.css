@@ -174,12 +174,21 @@ a:hover {
 
 @media (max-width: 768px) {
   :root {
-    --bg-left: min(100vw, 600px);
-    --bg-right: min(80vw, 450px);
+    --bg-left: 320px;   /* px fijo, NO vw */
+    --bg-right: 280px;  /* px fijo, NO vw */
+    --star-scale: 1;
   }
-  .bg-stars-left,
+
+  .bg-stars-left {
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+  }
+
   .bg-stars-right {
-    transform: none;
+    top: 0;
+    right: 0;
+    transform-origin: top right;
   }
 
   .container {
@@ -203,6 +212,7 @@ a:hover {
   .project-media-img {
     width: 100%;
   }
+
   .project-media-video {
     pointer-events: none;
   }
