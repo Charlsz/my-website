@@ -174,8 +174,8 @@ a:hover {
 
 @media (max-width: 768px) {
   :root {
-    --bg-left: 480px;
-    --bg-right: 420px;
+    --bg-left: min(100vw, 600px);
+    --bg-right: min(80vw, 450px);
   }
   .bg-stars-left,
   .bg-stars-right {
