@@ -179,16 +179,9 @@ a:hover {
     --star-scale: 1;
   }
 
-  .bg-stars-left {
-    bottom: 0;
-    left: 0;
-    transform-origin: bottom left;
-  }
-
+  .bg-stars-left,
   .bg-stars-right {
-    top: 0;
-    right: 0;
-    transform-origin: top right;
+    display: none;
   }
 
   .container {
