@@ -179,33 +179,41 @@ a:hover {
   font-weight: 400;
 }
 
+:root {
+  --bg-left: 600px;
+  --bg-right: 450px;
+}
+
 .bg-stars-left {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 70vw;
-  height: 90vh;
+  width: var(--bg-left);
+  height: var(--bg-left);
   z-index: -1;
   pointer-events: none;
   opacity: 0.28;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
 .bg-stars-right {
   position: fixed;
-  top: -10vh;
-  right: -25vw;
-  width: 70vw;
-  height: 90vh;
+  top: 0;
+  right: 0;
+  width: var(--bg-right);
+  height: var(--bg-right);
   z-index: -1;
   pointer-events: none;
   opacity: 0.28;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
+  :root {
+    --bg-left: 320px;
+    --bg-right: 280px;
+  }
+
   .container {
     margin: 40px auto 40px;
     padding: 0 20px;
@@ -221,19 +229,6 @@ a:hover {
 
   .about-section {
     margin-bottom: 40px;
-  }
-
-  .bg-stars-right {
-    display: none;
-  }
-
-  .bg-stars-left {
-    width: 2000px;
-    height: 100vh;
-    left: 80%;
-    transform: translateX(-50%);
-    top: 0;
-    bottom: auto;
   }
 }
 
