@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Charlie's site",
   description: "Carlos Galvis — Portfolio",
   icons: {
-    icon: "/my-website/images/frieren-staff.png",
+    icon: "/my-website/images/cgalvislogo.png",
   },
 };
 
