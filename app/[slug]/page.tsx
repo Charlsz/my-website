@@ -16,9 +16,6 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
   const { slug } = resolvedParams;
   const project = allProjects.find((p) => p.slug === slug);
 
-  const isProd = process.env.NODE_ENV === "production";
-  const basePath = isProd ? "/my-website" : "";
-
   if (!project) {
     return (
       <div className="container">
@@ -53,7 +50,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
               {project.image.endsWith(".mp4") || project.image.endsWith(".webm") ? (
                 <video
                   className="project-media project-media-video"
-                  src={`${basePath}${project.image}`}
+                  src={project.image}
                   autoPlay
                   loop
                   muted
@@ -62,7 +59,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
               ) : (
                 <img 
                   className="project-media project-media-img"
-                  src={`${basePath}${project.image}`} 
+                  src={project.image}
                   alt={project.title} 
                 />
               )}
