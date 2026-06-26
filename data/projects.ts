@@ -10,7 +10,7 @@ export const projectsByCategory: ProjectCategory[] = [
         summary: "Search, explore, and visualize NASA (and many more) datasets from a single interface",
         focus: "NASA Datasets, Space Visualization, Universal Search",
         stack: "Next.js, TypeScript, React Query, Tailwind CSS, Recharts",
-        image: "/images/norusearchvideo.mp4",
+        image: "/images/norusearch.png",
         alt: "NoruSearch Project",
         link: "https://www.norusearch.live/",
       },
