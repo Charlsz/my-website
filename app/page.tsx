@@ -5,15 +5,12 @@ import { Tabs, TabsList, TabsTab, TabsPanel } from "@/components/ui/tabs";
 import { ProjectMedia } from "@/components/ui/project-media";
 
 export default function Home() {
-  const isProd = process.env.NODE_ENV === "production";
-  const basePath = isProd ? "/my-website" : "";
-
   return (
     <div className="container">
       <header className="header">
         <h1 className="header-title">
           Carlos Galvis
-          <img src={`${basePath}/images/cat-pixel.gif`} alt="" width={50} height={50} />
+          <img src="/images/cat-pixel.gif" alt="" width={50} height={50} />
         </h1>
         <p className="header-subtitle">
           Updated {process.env.NEXT_PUBLIC_LAST_UPDATED}
@@ -59,7 +56,7 @@ export default function Home() {
                       </div>
                       <div className="project-card-content">
                         <ProjectMedia
-                          src={p.image ? `${basePath}${p.image}` : undefined}
+                          src={p.image || undefined}
                           alt={p.alt || p.title}
                           isVideo={!!(p.image && (p.image.endsWith(".mp4") || p.image.endsWith(".webm")))}
                           link={p.link}
@@ -111,7 +108,7 @@ export default function Home() {
             style={{ display: "block", marginTop: "40px", width: "100%" }}
           >
             <video 
-              src={`${basePath}/video/charlie.mp4`}
+              src="/video/charlie.mp4"
               autoPlay 
               loop 
               muted 
