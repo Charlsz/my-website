@@ -8,14 +8,14 @@ import "@/app/globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
-const siteUrl = "https://charlsz.github.io/my-website";
+const siteUrl = "https://charlsz.tech";
 
 export const metadata: Metadata = {
   title: "Charlie's site",
   description: "Carlos Galvis — Portfolio",
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: "/my-website/images/cgalvislogo.png",
+    icon: "/images/cgalvislogo.png",
   },
   openGraph: {
     title: "Charlie's site",
