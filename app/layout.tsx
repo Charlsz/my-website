@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { PixelCursorTrail } from "@/components/ui/pixel-trail";
 import BackgroundStars from "@/components/ui/backgroundstars";
 import BackgroundStars2 from "@/components/ui/backgroundstars2";
@@ -38,6 +39,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         {children}
+        <Analytics />
         <PixelCursorTrail />
         <div className="bg-stars-left">
           <BackgroundStars />
