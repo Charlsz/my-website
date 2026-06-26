@@ -7,11 +7,25 @@ import "@/app/globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
+const siteUrl = "https://charlsz.github.io/my-website";
+
 export const metadata: Metadata = {
   title: "Charlie's site",
   description: "Carlos Galvis — Portfolio",
+  metadataBase: new URL(siteUrl),
   icons: {
     icon: "/my-website/images/cgalvislogo.png",
+  },
+  openGraph: {
+    title: "Charlie's site",
+    description: "Carlos Galvis — Portfolio",
+    url: siteUrl,
+    siteName: "Charlie's site",
+    images: [{ url: "/images/urlpicture.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/urlpicture.png"],
   },
 };
 
