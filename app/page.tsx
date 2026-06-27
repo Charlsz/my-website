@@ -3,6 +3,7 @@ import { projectsByCategory } from "@/data/projects";
 import { Border1 } from "@/components/ui/border1";
 import { Tabs, TabsList, TabsTab, TabsPanel } from "@/components/ui/tabs";
 import { ProjectMedia } from "@/components/ui/project-media";
+import MusicPlayer from "@/components/music-player";
 
 export default function Home() {
   return (
@@ -101,10 +102,13 @@ export default function Home() {
             <Clock />
           </p>
           
+          <MusicPlayer />
+          
           <a 
             href="https://www.instagram.com/cgalvis._/" 
             target="_blank" 
             rel="noopener noreferrer"
+            className="footer-video-link"
             style={{ display: "block", marginTop: "40px", width: "100%" }}
           >
             <video 
