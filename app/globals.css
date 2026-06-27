@@ -24,9 +24,7 @@ a:visited {
   color: #111111;
 }
 
-a:hover {
-  opacity: 0.6;
-}
+
 
 .about-section a {
   text-decoration: underline;
@@ -309,14 +307,6 @@ a:hover {
   padding: 6px 12px;
   border: 1px solid #cccccc;
   border-radius: 6px;
-}
-
-.project-card-btn:hover {
-  opacity: 1;
-}
-
-a.project-card-media-link:hover {
-  opacity: 1;
 }
 
 .project-card-btn-icon {

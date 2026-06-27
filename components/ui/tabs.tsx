@@ -2,7 +2,6 @@
 
 import { Tabs as TabsPrimitive } from "@base-ui/react/tabs";
 import type React from "react";
-import { cn } from "@/lib/utils";
 
 export function Tabs({ className, ...props }: TabsPrimitive.Root.Props) {
   return (
@@ -55,7 +54,7 @@ export function TabsList({ className, children, ...props }: TabsPrimitive.List.P
 export function TabsTab({ className, ...props }: TabsPrimitive.Tab.Props) {
   return (
     <TabsPrimitive.Tab
-      className={cn(className, "tabs-tab")}
+      className={"tabs-tab" + (className ? ` ${className}` : "")}
       style={{
         position: "relative",
         display: "flex",

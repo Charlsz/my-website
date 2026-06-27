@@ -100,7 +100,7 @@ export default function MusicPlayer() {
           height: 28,
           borderRadius: 6,
           background: "#fff",
-          border: "1px solid #eaeaea",
+          border: "2px solid #a7a7a7",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -140,14 +140,14 @@ export default function MusicPlayer() {
                 padding: "0 10px",
                 borderRadius: 6,
                 background: "#fff",
-                border: "1px solid #eaeaea",
+                border: "2px solid #a7a7a7",
                 fontSize: 11,
                 color: "#a1a1aa",
                 whiteSpace: "nowrap",
                 willChange: "transform, opacity",
               }}
             >
-              inactive for {formatInactive(inactiveSeconds)}
+              Charlie was here {formatInactive(inactiveSeconds)}
             </motion.div>
           )}
           {playing && !showInfo && isHovered && (
@@ -164,7 +164,7 @@ export default function MusicPlayer() {
                 padding: "0 10px",
                 borderRadius: 6,
                 background: "#fff",
-                border: "1px solid #eaeaea",
+                border: "2px solid #a7a7a7",
                 fontSize: 11,
                 color: "#888",
                 whiteSpace: "nowrap",
@@ -192,7 +192,7 @@ export default function MusicPlayer() {
                 padding: "0 10px",
                 borderRadius: 6,
                 background: "#fff",
-                border: "1px solid #eaeaea",
+                border: "2px solid #a7a7a7",
                 textDecoration: "none",
                 color: "inherit",
                 fontSize: 11,
