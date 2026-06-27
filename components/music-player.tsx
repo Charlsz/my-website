@@ -91,6 +91,9 @@ export default function MusicPlayer() {
         onClick={() => { if (playing) setShowInfo((p) => !p); }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onFocus={() => setIsHovered(true)}
+        onBlur={() => setIsHovered(false)}
+        tabIndex={0}
         style={{
           position: "fixed",
           bottom: 24,
@@ -124,7 +127,7 @@ export default function MusicPlayer() {
         </div>
       </div>
 
-      <div style={{ position: "fixed", bottom: 24, left: 60, zIndex: 999, userSelect: "none" }}>
+      <div tabIndex={-1} style={{ position: "fixed", bottom: 24, left: 60, zIndex: 999, userSelect: "none" }}>
         <AnimatePresence mode="wait">
           {!playing && isHovered && (
             <motion.div
