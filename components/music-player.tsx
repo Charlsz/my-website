@@ -30,6 +30,9 @@ export default function MusicPlayer() {
   const [inactiveSeconds, setInactiveSeconds] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const stoppedAtRef = useRef<string | null>(null);
+  const btnRef = useRef<HTMLDivElement>(null);
+  const bubbleRef = useRef<HTMLDivElement>(null);
+  const [isTouchDevice] = useState(() => typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0));
 
   useEffect(() => {
     const fetchStatus = async () => {
@@ -80,6 +83,17 @@ export default function MusicPlayer() {
     return () => clearInterval(id);
   }, [status?.isPlaying]);
 
+  useEffect(() => {
+    if (!isTouchDevice) return;
+    const handleDocClick = (e: MouseEvent) => {
+      const target = e.target as Node;
+      if (btnRef.current?.contains(target) || bubbleRef.current?.contains(target)) return;
+      setIsHovered(false);
+    };
+    document.addEventListener("click", handleDocClick);
+    return () => document.removeEventListener("click", handleDocClick);
+  }, [isTouchDevice]);
+
   if (!status) return null;
 
   const playing = status.isPlaying;
@@ -88,12 +102,18 @@ export default function MusicPlayer() {
   return (
     <>
       <div
-        onClick={() => { if (playing) setShowInfo((p) => !p); }}
+        ref={btnRef}
+        onClick={() => {
+          if (!playing) return;
+          if (isTouchDevice) {
+            if (!isHovered) { setIsHovered(true); return; }
+            setShowInfo((p) => !p);
+          } else {
+            setShowInfo((p) => !p);
+          }
+        }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onFocus={() => setIsHovered(true)}
-        onBlur={() => setIsHovered(false)}
-        tabIndex={0}
         style={{
           position: "fixed",
           bottom: 24,
@@ -127,7 +147,7 @@ export default function MusicPlayer() {
         </div>
       </div>
 
-      <div tabIndex={-1} style={{ position: "fixed", bottom: 24, left: 60, zIndex: 999, userSelect: "none" }}>
+      <div ref={bubbleRef} tabIndex={-1} style={{ position: "fixed", bottom: 24, left: 60, zIndex: 999, userSelect: "none" }}>
         <AnimatePresence mode="wait">
           {!playing && isHovered && (
             <motion.div
