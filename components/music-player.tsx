@@ -10,10 +10,16 @@ function getRandomHeights() {
 }
 
 function formatInactive(seconds: number) {
-  if (seconds < 60) return `${seconds}s ago`;
-  const m = Math.floor(seconds / 60);
+  const d = Math.floor(seconds / 86400);
+  const h = Math.floor((seconds % 86400) / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
   const s = seconds % 60;
-  return `${m}m ${s}s ago`;
+  const parts: string[] = [];
+  if (d) parts.push(`${d}d`);
+  if (h) parts.push(`${h}h`);
+  if (m) parts.push(`${m}m`);
+  if (!parts.length || s) parts.push(`${s}s`);
+  return `${parts.join(" ")} ago`;
 }
 
 export default function MusicPlayer() {
