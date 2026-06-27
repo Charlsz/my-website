@@ -9,19 +9,6 @@ function getRandomHeights() {
   return Array.from({ length: BAR_COUNT }, () => Math.random() * 0.8 + 0.2);
 }
 
-function formatInactive(seconds: number) {
-  const d = Math.floor(seconds / 86400);
-  const h = Math.floor((seconds % 86400) / 3600);
-  const m = Math.floor((seconds % 3600) / 60);
-  const s = seconds % 60;
-  const parts: string[] = [];
-  if (d) parts.push(`${d}d`);
-  if (h) parts.push(`${h}h`);
-  if (m) parts.push(`${m}m`);
-  if (!parts.length || s) parts.push(`${s}s`);
-  return `${parts.join(" ")} ago`;
-}
-
 export default function MusicPlayer() {
   const [status, setStatus] = useState<{
     isPlaying: boolean;
@@ -33,9 +20,7 @@ export default function MusicPlayer() {
 
   const [heights, setHeights] = useState(() => Array(BAR_COUNT).fill(0.3));
   const [showInfo, setShowInfo] = useState(false);
-  const [inactiveSeconds, setInactiveSeconds] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const stoppedAtRef = useRef<string | null>(null);
   const btnRef = useRef<HTMLDivElement>(null);
   const bubbleRef = useRef<HTMLDivElement>(null);
   const [isTouchDevice] = useState(() => typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0));
@@ -65,28 +50,6 @@ export default function MusicPlayer() {
 
   useEffect(() => {
     setShowInfo(false);
-  }, [status?.isPlaying]);
-
-  useEffect(() => {
-    if (status?.isPlaying) {
-      stoppedAtRef.current = null;
-      setInactiveSeconds(0);
-      return;
-    }
-
-    if (status?.playedAt && !stoppedAtRef.current) {
-      stoppedAtRef.current = status.playedAt;
-    }
-
-    if (!stoppedAtRef.current) return;
-
-    const tick = () => {
-      const diff = Math.floor((Date.now() - new Date(stoppedAtRef.current!).getTime()) / 1000);
-      setInactiveSeconds(Math.max(0, diff));
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
   }, [status?.isPlaying]);
 
   useEffect(() => {
@@ -176,7 +139,7 @@ export default function MusicPlayer() {
                 willChange: "transform, opacity",
               }}
             >
-              Charlie was here {formatInactive(inactiveSeconds)}
+              Charlie is not listening music right now
             </motion.div>
           )}
           {playing && !showInfo && isHovered && (
