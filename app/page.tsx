@@ -21,7 +21,7 @@ export default function Home() {
       <main>
         <section className="about-section">
           <p>
-            <strong><em>Full-stack / design engineer.</em></strong>
+            <strong><em>B.Sc. in System Engineering.</em></strong>
           </p>
           <p>
             I run <a href="https://github.com/NoruLabs" target="_blank" rel="noopener noreferrer">NoruLabs</a> where I build tools around space and astronomy, starting with <a href="https://www.norusearch.live/" target="_blank" rel="noopener noreferrer">NoruSearch</a>, a universal interface for exploring NASA and astronomical datasets. I participate in hackathons, contribute to open source, and take on freelance projects. Always looking for the next thing worth building.

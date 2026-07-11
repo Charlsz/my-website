@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   color: #111111;
   font-size: 15px;
   line-height: 1.6;
@@ -134,52 +134,7 @@ a:visited {
   font-weight: 400;
 }
 
-:root {
-  --bg-left: 600px;
-  --bg-right: 450px;
-  --star-scale: 1.5;
-}
-
-.bg-stars-left {
-  position: fixed;
-  bottom: -40px;
-  left: 0px;
-  width: var(--bg-left);
-  height: var(--bg-left);
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.28;
-  overflow: hidden;
-  transform: scale(var(--star-scale, 1.5));
-  transform-origin: bottom left;
-}
-
-.bg-stars-right {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  width: var(--bg-right);
-  height: var(--bg-right);
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.28;
-  overflow: hidden;
-  transform: scale(var(--star-scale, 1.5));
-  transform-origin: top right;
-}
-
 @media (max-width: 768px) {
-  :root {
-    --bg-left: 320px;   /* px fijo, NO vw */
-    --bg-right: 280px;  /* px fijo, NO vw */
-    --star-scale: 1;
-  }
-
-  .bg-stars-left,
-  .bg-stars-right {
-    display: none;
-  }
-
   .container {
     margin: 40px auto 40px;
     padding: 0 20px;
