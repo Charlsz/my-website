@@ -34,7 +34,7 @@ export async function GET() {
         return Response.json({
           isPlaying: data.is_playing,
           title: data.item?.name,
-          artist: data.item?.artists?.map((a: any) => a.name).join(", "),
+          artist: data.item?.artists?.map((a: { name: string }) => a.name).join(", "),
           previewUrl: data.item?.preview_url,
           songUrl: data.item?.external_urls?.spotify,
           playedAt: data.is_playing ? null : new Date().toISOString(),
@@ -52,7 +52,7 @@ export async function GET() {
         return Response.json({
           isPlaying: false,
           title: item.track?.name,
-          artist: item.track?.artists?.map((a: any) => a.name).join(", "),
+          artist: item.track?.artists?.map((a: { name: string }) => a.name).join(", "),
           previewUrl: item.track?.preview_url,
           songUrl: item.track?.external_urls?.spotify,
           playedAt: item.played_at,

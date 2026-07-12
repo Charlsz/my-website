@@ -45,10 +45,8 @@ export default function MusicPlayer() {
       const id = setInterval(() => setHeights(getRandomHeights()), 180);
       return () => clearInterval(id);
     }
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHeights(Array(BAR_COUNT).fill(0.3));
-  }, [status?.isPlaying]);
-
-  useEffect(() => {
     setShowInfo(false);
   }, [status?.isPlaying]);
 
@@ -92,7 +90,7 @@ export default function MusicPlayer() {
           height: 28,
           borderRadius: 6,
           background: "#fff",
-          border: "2px solid #a7a7a7",
+          border: "2px dashed #a7a7a7",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -132,7 +130,7 @@ export default function MusicPlayer() {
                 padding: "0 10px",
                 borderRadius: 6,
                 background: "#fff",
-                border: "2px solid #a7a7a7",
+                border: "2px dashed #a7a7a7",
                 fontSize: 11,
                 color: "#a1a1aa",
                 whiteSpace: "nowrap",
@@ -156,7 +154,7 @@ export default function MusicPlayer() {
                 padding: "0 10px",
                 borderRadius: 6,
                 background: "#fff",
-                border: "2px solid #a7a7a7",
+                border: "2px dashed #a7a7a7",
                 fontSize: 11,
                 color: "#888",
                 whiteSpace: "nowrap",
@@ -184,7 +182,7 @@ export default function MusicPlayer() {
                 padding: "0 10px",
                 borderRadius: 6,
                 background: "#fff",
-                border: "2px solid #a7a7a7",
+                border: "2px dashed #a7a7a7",
                 textDecoration: "none",
                 color: "inherit",
                 fontSize: 11,
