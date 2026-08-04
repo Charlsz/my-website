@@ -63,10 +63,21 @@ a:visited {
   font-size: 13px;
   color: #a1a1aa;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.section-title-row a img {
+  opacity: 0.55;
 }
 
 .section-title-row a:hover {
   color: #111111;
+  opacity: 1;
+}
+
+.section-title-row a:hover img {
   opacity: 1;
 }
 

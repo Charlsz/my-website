@@ -2,8 +2,18 @@ import type { ProjectCategory } from "@/types";
 
 export const projectsByCategory: ProjectCategory[] = [
   {
-    name: "Web Apps",
+    name: "Apps",
     projects: [
+      {
+        title: "Entropy - Digital life workspace",
+        slug: "entropy",
+        summary: "Our computers can do better. A local-first workspace to understand, organize, and work with your digital life — without replacing your files.",
+        focus: "Local-first Workspace, File Inventory, Markdown Notebook",
+        stack: "Electron, React, TypeScript, Vite",
+        image: "/images/Entropy.png",
+        alt: "Entropy Project",
+        link: "https://entropy.charlsz.tech",
+      },
       {
         title: "NoruSearch - Universal space data browser",
         slug: "norusearch",
@@ -14,6 +24,11 @@ export const projectsByCategory: ProjectCategory[] = [
         alt: "NoruSearch Project",
         link: "https://www.norusearch.live/",
       },
+    ],
+  },
+  {
+    name: "Skill Build",
+    projects: [
       {
         title: "Ferret - Local-first AI workspace explorer",
         slug: "ferret",
@@ -23,6 +38,7 @@ export const projectsByCategory: ProjectCategory[] = [
         image: "/images/ferret.png",
         alt: "Ferret Project",
         link: "https://tryferret.vercel.app/",
+        github: "https://github.com/Charlsz/ferret",
       },
       {
         title: "Structura - GitHub Repo Visualizer",
@@ -33,12 +49,8 @@ export const projectsByCategory: ProjectCategory[] = [
         image: "/images/structura.png",
         alt: "Structura Project",
         link: "https://structura-git.vercel.app/",
+        github: "https://github.com/Charlsz/structura",
       },
-    ],
-  },
-  {
-    name: "Skill Build",
-    projects: [
       {
         title: "RISE - Rocket Integrated Simulation Environment",
         slug: "rise",

@@ -24,12 +24,12 @@ export default function Home() {
             <strong><em>B.Sc. in System Engineering.</em></strong>
           </p>
           <p>
-            I run <a href="https://github.com/NoruLabs" target="_blank" rel="noopener noreferrer">NoruLabs</a> where I build tools around space and astronomy, starting with <a href="https://www.norusearch.live/" target="_blank" rel="noopener noreferrer">NoruSearch</a>, a universal interface for exploring NASA and astronomical datasets. I participate in hackathons, contribute to open source, and take on freelance projects. Always looking for the next thing worth building.
+            I build tools i wish existed. My work ranges from local-first productivity software to space and astronomy projects. I participate in hackathons, contribute to open source, and take on freelance projects. Always looking for the next thing worth building.
           </p>
           <p>
             You can find me on <a href="https://x.com/charlswfeelings" target="_blank" rel="noopener noreferrer">X</a>,{" "}
             <a href="https://linkedin.com/in/cgalvisp" target="_blank" rel="noopener noreferrer">LinkedIn</a>,{" "}
-            <a href="https://github.com/NoruLabs" target="_blank" rel="noopener noreferrer">GitHub</a>,{" "}
+            <a href="https://github.com/Charlsz" target="_blank" rel="noopener noreferrer">GitHub</a>,{" "}
             <a href="https://www.instagram.com/cgalvis._/" target="_blank" rel="noopener noreferrer">Instagram</a>,{" "}
             <a href="https://www.youtube.com/@charlswfeelings" target="_blank" rel="noopener noreferrer">YouTube</a>,{" "}
             or reach me via <a href="mailto:cgalvis21_@hotmail.com">email</a>.
@@ -39,9 +39,12 @@ export default function Home() {
         <section style={{ marginTop: 80, marginBottom: 80 }}>
           <div className="section-title-row">
             <h2 className="section-title">Projects</h2>
-            <a href="https://github.com/Charlsz" target="_blank" rel="noopener noreferrer">See more projects →</a>
+            <a href="https://github.com/Charlsz" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.simpleicons.org/github" alt="" width={16} height={16} />
+              more projects →
+            </a>
           </div>
-          <Tabs defaultValue="Web Apps">
+          <Tabs defaultValue="Apps">
             <TabsList>
               {projectsByCategory.map((cat) => (
                 <TabsTab key={cat.name} value={cat.name}>{cat.name}</TabsTab>
