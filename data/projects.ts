@@ -7,7 +7,7 @@ export const projectsByCategory: ProjectCategory[] = [
       {
         title: "Entropy - Digital life workspace",
         slug: "entropy",
-        summary: "Our computers can do better. A local-first workspace to understand, organize, and work with your digital life — without replacing your files.",
+        summary: "Desktop workspace and file-intelligence app.",
         focus: "Local-first Workspace, File Inventory, Markdown Notebook",
         stack: "Electron, React, TypeScript, Vite",
         image: "/images/Entropy.png",
