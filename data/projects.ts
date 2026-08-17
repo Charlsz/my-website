@@ -22,7 +22,7 @@ export const projectsByCategory: ProjectCategory[] = [
         stack: "Next.js, TypeScript, React Query, Tailwind CSS, Recharts",
         image: "/images/copernicus_black.png",
         alt: "Copernicus Project",
-        link: "https://www.copernicus.charlsz.tech/",
+        link: "https://copernicus.charlsz.tech/",
       },
     ],
   },
