@@ -12,9 +12,6 @@ export const metadata: Metadata = {
   title: "Charlie",
   description: "Carlos Galvis - Portfolio",
   metadataBase: new URL(siteUrl),
-  icons: {
-    icon: "/images/logo.png",
-  },
   openGraph: {
     title: "Carlos Galvis",
     description: "Born in Cartagena, Colombia. Software Engineer & Designer",
