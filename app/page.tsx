@@ -24,7 +24,10 @@ export default function Home() {
             <strong><em>B.Sc. in System Engineering.</em></strong>
           </p>
           <p>
-            I build tools i wish existed. My work ranges from local-first productivity software to space and astronomy projects. I participate in hackathons, contribute to open source, and take on freelance projects. Always looking for the next thing worth building.
+            I build tools i wish existed. I like art, design, astrophysics, astronomy, space exploration.
+          </p>
+          <p>
+            I truly believe that projects should be made for the progress of humanity.
           </p>
           <p>
             You can find me on <a href="https://x.com/charlswfeelings" target="_blank" rel="noopener noreferrer">X</a>,{" "}

@@ -13,18 +13,19 @@ export const metadata: Metadata = {
   description: "Carlos Galvis - Portfolio",
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: "/images/cgalvislogo.png",
+    icon: "/images/logo.png",
   },
   openGraph: {
-    title: "Charlie",
-    description: "Carlos Galvis - Portfolio",
+    title: "Carlos Galvis",
+    description: "Born in Cartagena, Colombia. Software Engineer & Designer",
     url: siteUrl,
     siteName: "Charlie",
-    images: [{ url: "/images/urlpicture.png", width: 1200, height: 630 }],
+    images: [{ url: "/images/charlie.png"}],
   },
   twitter: {
-    card: "summary_large_image",
-    images: ["/images/urlpicture.png"],
+    title: "Carlos Galvis",
+    description: "Born in Cartagena, Colombia. Software Engineer & Designer",
+    images: "/images/charlie.png",
   },
 };
 
