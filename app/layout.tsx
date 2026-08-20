@@ -4,7 +4,11 @@ import { Analytics } from "@vercel/analytics/next";
 import { PixelCursorTrail } from "@/components/ui/pixel-trail";
 import "@/app/globals.css";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "variable",
+});
 
 const siteUrl = "https://charlsz.tech";
 

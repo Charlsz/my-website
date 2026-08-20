@@ -21,7 +21,7 @@ export default function Home() {
       <main>
         <section className="about-section">
           <p>
-            <strong><em>B.Sc. in System Engineering.</em></strong>
+            <strong>B.Sc. in System Engineering.</strong>
           </p>
           <p>
             I build tools i wish existed. I like art, design, astrophysics, astronomy, space exploration.

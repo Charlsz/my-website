@@ -1,10 +1,22 @@
 @import "tailwindcss";
 
+:root {
+  --color-white: #FDFDFC;
+  --color-black: #111111;
+  --color-gray: #9C9C9B;
+  --font-size: 14px;
+  --line-height: 20px;
+  --font-weight-body: 460;
+  --font-weight-name: 500;
+  --font-weight-bold: 700;
+}
+
 body {
-  background-color: #FFFFFF;
-  color: #111111;
-  font-size: 15px;
-  line-height: 1.6;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -16,19 +28,17 @@ body {
 }
 
 a {
-  color: #111111;
+  color: var(--color-black);
   text-decoration: none;
 }
 
 a:visited {
-  color: #111111;
+  color: var(--color-black);
 }
-
-
 
 .about-section a {
   text-decoration: underline;
-  text-decoration-color: #111111;
+  text-decoration-color: var(--color-black);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
@@ -49,19 +59,22 @@ a:visited {
   left: 0;
   right: 0;
   height: 1px;
-  background: repeating-linear-gradient(90deg, #d4d4d8 0px, #d4d4d8 6px, transparent 6px, transparent 10px);
+  background: repeating-linear-gradient(90deg, var(--color-gray) 0px, var(--color-gray) 6px, transparent 6px, transparent 10px);
 }
 
 .section-title {
-  color: #111111;
-  font-weight: 400;
-  font-size: 16px;
+  color: var(--color-black);
+  font-weight: var(--font-weight-body);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   margin: 0;
 }
 
 .section-title-row a {
-  font-size: 13px;
-  color: #a1a1aa;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-body);
+  color: var(--color-gray);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -73,7 +86,7 @@ a:visited {
 }
 
 .section-title-row a:hover {
-  color: #111111;
+  color: var(--color-black);
   opacity: 1;
 }
 
@@ -86,6 +99,12 @@ a:visited {
   flex-direction: column;
   gap: 24px;
   margin-bottom: 60px;
+  font-weight: var(--font-weight-body);
+  color: var(--color-black);
+}
+
+.about-section strong {
+  font-weight: var(--font-weight-bold);
 }
 
 .header {
@@ -96,9 +115,10 @@ a:visited {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #111111;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-name);
+  color: var(--color-black);
 }
 
 .header-title img {
@@ -109,7 +129,10 @@ a:visited {
 }
 
 .header-subtitle {
-  color: #a1a1aa;
+  color: var(--color-gray);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-body);
   margin-top: 4px;
 }
 
@@ -121,13 +144,16 @@ a:visited {
 .footer-line {
   width: 30px;
   height: 1px;
-  background-color: #eaeaea;
+  background-color: var(--color-gray);
   margin-bottom: 20px;
+  opacity: 0.35;
 }
 
 .footer-text {
-  color: #a1a1aa;
-  font-size: 13px;
+  color: var(--color-gray);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-body);
 }
 
 .list-row {
@@ -141,8 +167,8 @@ a:visited {
 
 .list-name {
   flex: 1;
-  color: #111111;
-  font-weight: 400;
+  color: var(--color-black);
+  font-weight: var(--font-weight-body);
 }
 
 @media (max-width: 768px) {
@@ -194,8 +220,9 @@ a:visited {
     width: 200%;
   }
 }
+
 .tabs-tab[data-active] {
-  color: #111 !important;
+  color: var(--color-black) !important;
 }
 
 .project-card {
@@ -229,16 +256,18 @@ a:visited {
 }
 
 .project-card-title {
-  font-size: 16px;
-  font-weight: 500;
-  color: #111111;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-body);
+  color: var(--color-black);
   margin-bottom: 8px;
 }
 
 .project-card-summary {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #52525b;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height);
+  color: var(--color-gray);
   margin-bottom: 12px;
 }
 
@@ -249,9 +278,11 @@ a:visited {
 }
 
 .project-card-tag {
-  font-size: 11px;
-  color: #7a7a80;
-  background: #f4f4f5;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-body);
+  color: var(--color-gray);
+  background: color-mix(in srgb, var(--color-gray) 12%, var(--color-white));
   padding: 2px 8px;
   border-radius: 4px;
 }
@@ -267,12 +298,18 @@ a:visited {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 13px;
-  color: #525253;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-body);
+  color: var(--color-gray);
   text-decoration: none;
   padding: 6px 12px;
-  border: 1px solid #cccccc;
+  border: 1px solid color-mix(in srgb, var(--color-gray) 45%, var(--color-white));
   border-radius: 6px;
+}
+
+.project-card-btn:hover {
+  color: var(--color-black);
 }
 
 .project-card-btn-icon {

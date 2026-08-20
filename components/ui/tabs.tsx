@@ -25,9 +25,9 @@ export function TabsList({ className, children, ...props }: TabsPrimitive.List.P
         alignItems: "center",
         gap: 2,
         borderRadius: 8,
-        background: "#f4f4f5",
+        background: "color-mix(in srgb, var(--color-gray) 12%, var(--color-white))",
         padding: 2,
-        color: "#a1a1aa",
+        color: "var(--color-gray)",
       }}
       {...props}
     >
@@ -43,8 +43,8 @@ export function TabsList({ className, children, ...props }: TabsPrimitive.List.P
           transition: "width 0.2s ease-in-out, transform 0.2s ease-in-out",
           zIndex: -1,
           borderRadius: 6,
-          background: "#ffffff",
-          boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
+          background: "var(--color-white)",
+          boxShadow: "0 1px 3px rgba(17,17,17,0.05)",
         }}
       />
     </TabsPrimitive.List>
@@ -67,9 +67,10 @@ export function TabsTab({ className, ...props }: TabsPrimitive.Tab.Props) {
         border: "1px solid transparent",
         padding: "0 12px",
         fontSize: 14,
-        fontWeight: 500,
+        lineHeight: "20px",
+        fontWeight: 460,
         outline: "none",
-        color: "#a1a1aa",
+        color: "var(--color-gray)",
         background: "transparent",
       }}
       {...props}
